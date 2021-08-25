@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.wallstreet.main.home.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="item"
+            app:argType="integer" />
+        <argument
+            android:name="shop"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_detatilFragment"
+            app:destination="@id/detatilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detatilFragment"
+        android:name="com.wallstreet.main.detatil.DetatilFragment"
+        android:label="fragment_detatil"
+        tools:layout="@layout/fragment_detatil" />
+</navigation>
